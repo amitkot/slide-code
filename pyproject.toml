@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "slide-code"
+version = "0.1.0"
+description = ""
+authors = ["Amit Kotlovski <amit@amitkot.com>"]
+readme = "README.md"
+packages = [{include = "slide_code"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyperclip = "^1.8.2"
+black = "^23.3.0"
+pygments = "^2.15.1"
+typer = {extras = ["all"], version = "^0.9.0"}
+
+[tool.poetry.scripts]  # https://python-poetry.org/docs/pyproject/#scripts
+slide-code = "slide_code.cli:app"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
